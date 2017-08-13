@@ -21,85 +21,73 @@ var gulp = require('gulp'),
 // Пути
 
 var path = {
-    build: { // Тут мы укажем куда складывать готовые после сборки файлы
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/img/',
-        sprite: 'build/img/',
-        fonts: 'build/fonts/'
+    build: {
+        html: '../../',
+        js: '../../js/',
+        css: '../../css/',
+        img: '../../img/',
+        sprite: '../../img/',
+        fonts: '../../fonts/'
     },
-    src: { // Пути откуда брать исходники
-        html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/main.js', // Скрипты
-        style: 'src/style/main.less', // Стили
-        img: 'src/assets/img/**/*.*', // Картинки
-        sprite : 'src/assets/sprite/**/*.*', // и исходники спрайтов в отдельную папку
-        fonts: 'src/fonts/**/*.*'
+    src: {
+        html: '../*.html',
+        js: '../js/main.js',
+        style: '../less/main.less',
+        img: '../assets/images/**/*.*',
+        sprite : '../assets/sprite/**/*.*',
+        fonts: '../assets/fonts/**/*.*'
     },
-    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-        html: 'src/**/*.html',
-        js: 'src/js/**/*.js',
-        style: 'src/style/**/*.less',
-        img: 'src/assets/img/**/*.*',
-        sprite: 'src/assets/sprite/**/*.*',
-        fonts: 'src/fonts/**/*.*'
-    },
-    clean: './build'
+    watch: {
+        html: '../**/*.html',
+        js: '../js/**/*.js',
+        style: '../less/**/*.less',
+        img: '../assets/images/**/*.*',
+        sprite: '../assets/sprite/**/*.*',
+        fonts: '../assets/fonts/**/*.*'
+    }
 };
 
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "../../"
     },
-    tunnel: false // внешний доступ отключен
-    // port: 3001 // порт по умолчанию
+    tunnel: false // external port
+    // port: 3001 // default port
 };
 
 
-// собираем html
+// build html
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) // Выберем файлы по нужному пути
-        .pipe(rigger()) // Прогоним через rigger
-        .pipe(gulp.dest(path.build.html)) // Выплюнем их в папку build
-        .pipe(reload({stream: true})); // И перезагрузим наш сервер для обновлений
+    gulp.src(path.src.html)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 });
 
 
-// собираем js библиотеки
-/*
-gulp.task('js:libs', function() {
-    return gulp.src([ // Берем все необходимые библиотеки
-        'bower_components/jquery-ui/jquery-ui.min.js', // jquery-ui
-        'bower_components/slick-carousel/slick/slick.min.js' // и ещё slick...
-        ])
-        .pipe(gulp.dest(path.build.js)); // Выгружаем в папку app/js
-});
-*/
-
-// собираем javascript
+// build js
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) // Найдем наш main файл
-        .pipe(rigger()) // Прогоним через rigger
-        .pipe(sourcemaps.init()) // Инициализируем sourcemap
-        //.pipe(uglify()) // Сожмем наш js
-        .pipe(sourcemaps.write()) // Пропишем карты
-        .pipe(gulp.dest(path.build.js)) // Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); // И перезагрузим сервер*/
+    gulp.src(path.src.js)
+        .pipe(rigger())
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
 });
 
 
-// спрайты
+// build sprites
 
 gulp.task('sprite:build', function() {
   var spriteData =
-      gulp.src(path.src.sprite) // путь, откуда берем картинки для спрайта
+      gulp.src(path.src.sprite)
           .pipe(spritesmith({
               imgName: 'sprite.png',
-              imgPath: '/img/sprite.png',
+              imgPath: '../../images/icons.png',
               cssName: 'sprite.less',
               cssFormat: 'less',
               algorithm: 'binary-tree',
@@ -108,42 +96,42 @@ gulp.task('sprite:build', function() {
               }
           }));
 
-  spriteData.img.pipe(gulp.dest(path.build.sprite)); // путь, куда сохраняем картинку
-  spriteData.css.pipe(gulp.dest('./src/style/elements/')); // путь, куда сохраняем стили
+  spriteData.img.pipe(gulp.dest(path.build.sprite));
+  spriteData.css.pipe(gulp.dest('../less/elements/'));
 });
 
 
 
-// собираем less
+// build css
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) // выбираем main.less
-        //.pipe(sourcemaps.init()) // То же самое что и с js
-        .pipe(less()) // Скомпилируем
-        .pipe(prefixer()) // Добавим вендорные префиксы
-        .pipe(cssmin()) // Сожмем
-        //.pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css)) // И в build
+    gulp.src(path.src.style)
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(prefixer())
+        .pipe(cssmin())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
 
 
-// собираем изображения
+// build images
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+    gulp.src(path.src.img)
+        .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
 
 
-// копируем шрифты
+// copy fonts
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -154,9 +142,8 @@ gulp.task('fonts:build', function() {
 // build
 
 gulp.task('build', [
-    'clean',
+    //'clean',
     'html:build',
-    //'js:libs',
     'js:build',
     'sprite:build',
     'style:build',
@@ -165,7 +152,7 @@ gulp.task('build', [
 ]);
 
 
-// мониторинг изменений в файлах
+// gulp watch
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -186,21 +173,23 @@ gulp.task('watch', function(){
 });
 
 
-// запуск browsersync
+// browsersync
 
 gulp.task('webserver', function () {
     browserSync(config);
 });
 
 
-// очистка папки build по требованию
+// gulp clean
 
 gulp.task('clean', function (cb) {
-    rimraf(path.clean, cb);
+    rimraf(path.build.js, cb);
+    rimraf(path.build.img, cb);
+    rimraf(path.build.fonts, cb);
 });
 
 
-// таск по умолчанию: сделать экспорт проекта,
-// запустить сервер и мониторить изменения
+// gulp default task
+// build -> webserver -> watch
 
 gulp.task('default', ['build', 'webserver', 'watch']);
