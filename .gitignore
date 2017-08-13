@@ -5,5 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
-node_modules/
+static/.dev-tools/node_modules/
+static/.dev-tools/bower_components/
+
 Thumbs.db
