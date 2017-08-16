@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,14 @@
         <a href="" class="breadcrumbs__link">Каталог товаров</a>
       </li>
       <li class="breadcrumbs__item">
-        <a href="" class="breadcrumbs__link">Моноподы для селфи</a>
+        <a class="breadcrumbs__link">Моноподы для селфи</a>
       </li>
     </ul>
   </div>
 
   <aside class="catalog__filter filter">
     <div class="columntitle filter__columntitle">
-      <h2 class="columntitle__heading filter__heading">Фильтр:</h2>
+      <div class="columntitle__heading filter__heading">Фильтр:</div>
     </div>
 
     <form id="filter-form" class="filter__form" name="filter-form">
@@ -38,8 +38,8 @@
         <legend class="filter__fieldset-caption">Стоимость</legend>
         <input class="filter__input-range" type="range" id="filter-range-min" min="0" max="10000" step="100" name="filter-in-min">
         <input class="filter__input-range" type="range" id="filter-range-max" min="0" max="10000" step="100" name="filter-range">
-        <label class="filter__label-range_min" for="filter-range-min" name="filter-label-min">0</label>
-        <label class="filter__label-range_max" for="filter-range-max" name="filter-label-max">10000</label>
+        <label class="filter__label-range_min" for="filter-range-min">0</label>
+        <label class="filter__label-range_max" for="filter-range-max">10000</label>
       </fieldset>
 
       <fieldset class="filter__fieldset">
@@ -63,7 +63,7 @@
           </li>
           <li class="filter__item">
             <input class="filter__input-checkbox" id="filter-pink" type="checkbox" name="color">
-            <label for="filter-rose" class="filter__label">Розовый</label>
+            <label for="filter-pink" class="filter__label">Розовый</label>
           </li>
         </ul>
       </fieldset>
@@ -89,7 +89,7 @@
 
   <main class="catalog__main">
     <div class="columntitle">
-      <h2 class="columntitle__heading">Сортировка:</h2>
+      <div class="columntitle__heading">Сортировка:</div>
       <ul class="columntitle__sort sort__list">
         <li class="sort__item">
           <a href="" class="sort__link">По цене</a>
@@ -108,50 +108,7 @@
     </div>
 
     <div class="catalog__content products">
-      <article class="products__item">
-        <img src="" alt="" class="products__image">
-        <a href="" class="products__link">
-          <h1 class="products__title">
-            Любительская селфи-палка
-          </h1>
-        </a>
-        <span class="products__price">
-          500 руб.
-        </span>
-      </article>
-      <article class="products__item">
-        <img src="" alt="" class="products__image">
-        <a href="" class="products__link">
-          <h1 class="products__title">
-            Профессиональная селфи-палка
-          </h1>
-        </a>
-        <span class="products__price">
-          1 500 руб.
-        </span>
-      </article>
-      <article class="products__item">
-        <img src="" alt="" class="products__image">
-        <a href="" class="products__link">
-          <h1 class="products__title">
-            Непотопляемая селфи-палка
-          </h1>
-        </a>
-        <span class="products__price">
-          2 500 руб.
-        </span>
-      </article>
-      <article class="products__item">
-        <img src="" alt="" class="products__image">
-        <a href="" class="products__link">
-          <h1 class="products__title">
-            Селфи-палка "Следуй за мной"
-          </h1>
-        </a>
-        <span class="products__price">
-          4 900 руб.
-        </span>
-      </article>
+      //= templates/catalog/catalog__content.html
     </div>
 
     <div class="paginator">
