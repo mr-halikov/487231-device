@@ -18,7 +18,7 @@
     </div>
     <div class="header__top">
       <form class="header__search-form search" id="search-form">
-        <label for="search" class="search__label"></label>
+        <label for="search" class="search__label">Поиск по сайту</label>
         <input type="search" class="search__input" id="search" name="search">
         <button class="search__button"
                 type="submit"
@@ -50,7 +50,7 @@
         <ul class="main-menu__list">
           <li class="main-menu__item main-menu__item_catalog">
             <a href="catalog.html" class="main-menu__link" title="Каталог">Каталог</a>
-              <ul class="main-menu__catalog-menu">
+              <ul class="main-menu__catalog-menu catalog-menu__list">
                 <li class="catalog-menu__item">
                   <a href="" class="catalog-menu__link" title="Виртуальная реальность">Виртуальная реальность</a>
                 </li>
@@ -78,7 +78,7 @@
             <a href="" class="main-menu__link" title="Доставка">Доставка</a>
           </li>
           <li class="main-menu__item main-menu__item_contacts">
-            <a href="" class="main-menu__linl" title="Контакты">Контакты</a>
+            <a href="" class="main-menu__link" title="Контакты">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -101,7 +101,7 @@
     
       <article class="slider__item slider__item_01">
         <div class="slider__image-wrapper">
-          <img src="img/slider/slider-1-png" alt="Длинная палка для селфи" class="slider__image">
+          <img src="img/slider/slider-1.png" alt="Длинная палка для селфи" class="slider__image">
         </div>
         <div class="slider__content-wrapper">
           <h2 class="heading slider__heading">
@@ -112,25 +112,25 @@
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a href="#" class="btn slider__link" title="Подробная информация о товаре">Подробнее</a>
-          <ul class="slider__item-details-list">
+          <ul class="slider__details-list">
             <li class="slider__details-item">
-              <span class="slider__details-item-content">8,5 м</span>
-              <span class="slider__details-item-name">Длина палки</span>
+              <span class="slider__details-item_content">8,5 м</span>
+              <span class="slider__details-item_name">Длина палки</span>
             </li>
             <li class="slider__details-item">
-              <span class="slider__details-item-content">5 кг</span>
-              <span class="slider__details-item-name">Вес палки</span>
+              <span class="slider__details-item_content">5 кг</span>
+              <span class="slider__details-item_name">Вес палки</span>
             </li>
             <li class="slider__details-item">
-              <span class="slider__details-item-content">Карбон</span>
-              <span class="slider__details-item-name">Материал</span>
+              <span class="slider__details-item_content">Карбон</span>
+              <span class="slider__details-item_name">Материал</span>
             </li>
           </ul>
         </div>
       </article>
       <article class="slider__item slider__item_02">
         <div class="slider__image-wrapper">
-          <img src="img/slider/slider-2-png" alt="Мотивирующий фитнес-браслет" class="slider__image">
+          <img src="img/slider/slider-2.png" alt="Мотивирующий фитнес-браслет" class="slider__image">
         </div>
         <div class="slider__content-wrapper">
           <h2 class="heading slider__heading">
@@ -141,17 +141,17 @@
             не пропускать занятия и соблюдать диету.
           </p>
           <a href="#" class="btn slider__link" title="Подробная информация о товаре">Подробнее</a>
-          <ul class="slider__item-details-list">
+          <ul class="slider__details-list">
             <li class="slider__details-item">
-              <span class="slider__details-item-content">48 часов</span>
-              <span class="slider__details-item-name">Без подзарядки</span>
+              <span class="slider__details-item_content">48 часов</span>
+              <span class="slider__details-item_name">Без подзарядки</span>
             </li>
           </ul>
         </div>
       </article>
       <article class="slider__item slider__item_03">
         <div class="slider__image-wrapper">
-          <img src="img/slider/slider-3-png" alt="Квадрокоптер с лазером" class="slider__image">
+          <img src="img/slider/slider-3.png" alt="Квадрокоптер с лазером" class="slider__image">
         </div>
         <div class="slider__content-wrapper">
           <h2 class="heading slider__heading">
@@ -163,14 +163,14 @@
             мощным лазером, замаскированным под стандартную камеру.
           </p>
           <a href="#" class="btn slider__link" title="Подробная информация о товаре">Подробнее</a>
-          <ul class="slider__item-details-list">
+          <ul class="slider__details-list">
             <li class="slider__details-item">
-              <span class="slider__details-item-content">800 м</span>
-              <span class="slider__details-item-name">Дальность полета</span>
+              <span class="slider__details-item_content">800 м</span>
+              <span class="slider__details-item_name">Дальность полета</span>
             </li>
             <li class="slider__details-item">
-              <span class="slider__details-item-content">50 м</span>
-              <span class="slider__details-item-name">Радиус поражения</span>
+              <span class="slider__details-item_content">50 м</span>
+              <span class="slider__details-item_name">Радиус поражения</span>
             </li>
           </ul>
         </div>
@@ -213,9 +213,9 @@
     <section class="services">
       <div class="services__controls">
         <ul class="services__controls_list">
-          <li class="services__controls_item">Доставка</li>
-          <li class="services__controls_item">Гарантия</li>
-          <li class="services__controls_item">Кредит</li>
+          <li class="btn services__controls_item">Доставка</li>
+          <li class="btn services__controls_item">Гарантия</li>
+          <li class="btn services__controls_item">Кредит</li>
         </ul>
       </div>
       <article class="services__item_delivery">
@@ -271,24 +271,24 @@
     </section>
     <section class="about">
       <h2 class="section__title">О нас</h2>
-      <p class="">
+      <p class="section__text">
         Огромный выбор гаджетов не оставит равнодушным гика,
         который есть в каждом из нас.
       </p>
-      <p class="">
+      <p class="section__text">
         Мы можем доставить ваш товар в самые отдаленные точки России!
         DEVICE работает со многими транспортными компаниями:
       </p>
-      <ul class="">
-        <li class="">Деловые Линии</li>
-        <li class="">Автотрейдинг</li>
-        <li class="">ЖелДорЭкспедиция</li>
+      <ul class="section__list_delivery about__delivery-list">
+        <li class="about__delivery-item">Деловые Линии</li>
+        <li class="about__delivery-item">Автотрейдинг</li>
+        <li class="about__delivery-item">ЖелДорЭкспедиция</li>
       </ul>
       <a href="#" class="btn" title="Подробнее о компании">Подробнее о нас</a>
     </section>
     <section class="contacts">
       <h2 class="section__title">Контакты</h2>
-      <p class="">
+      <p class="section__text">
         Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
         проверить работоспособность покупки. Всякое бывает.
       </p>
@@ -300,41 +300,41 @@
 
   </main>
 
-<footer class="page-footer">
+<footer class="page-footer footer">
   <div class="footer__col footer__col_left">
     <div class="footer__logo">
-      <a href="" class="footer__logo_link" title="Device: Главная">Device</a>
+      <a href="" class="footer__logo-link" title="Device: Главная">Device</a>
     </div>
     <p class="footer__address">
       г. Москва, ул. Строителей, 15
     </p>
   </div>
   <div class="footer__col footer__col_middle">
-    <ul class="footer__nav">
+    <ul class="footer__nav-list">
       <li class="footer__nav-item">
-        <a href="" class="footer__nav_link" title="Доставка">Доставка</a>
+        <a href="" class="footer__nav-link" title="Доставка">Доставка</a>
       </li>
       <li class="footer__nav-item">
-        <a href="" class="footer__nav_link" title="Гарантия">Гарантия</a>
+        <a href="" class="footer__nav-link" title="Гарантия">Гарантия</a>
       </li>
       <li class="footer__nav-item">
-        <a href="" class="footer__nav_link" title="Контакты">Контакты</a>
+        <a href="" class="footer__nav-link" title="Контакты">Контакты</a>
       </li>
     </ul>
-    <ul class="footer__social">
-      <li class="footer__social_tem">
+    <ul class="footer__social-list">
+      <li class="footer__social_item">
         <a href="" class="footer__social-link footer__social-link_fb" title="Мы в Facebook"></a>
       </li>
-      <li class="footer__social_tem">
+      <li class="footer__social_item">
         <a href="" class="footer__social-link footer__social-link_insta" title="Мы в Instagram"></a>
       </li>
-      <li class="footer__social_tem">
+      <li class="footer__social_item">
         <a href="" class="footer__social-link footer__social-link_twitter" title="Мы в Twitter"></a>
       </li>
     </ul>
   </div>
   <div class="footer__col footer__col_right">
-    <ul class="footer_shop-menu">
+    <ul class="footer__shop-menu">
       <li class="footer__shop-menu-item">
         <a href="" class="footer__shop-menu-link" title="Войти в личный кабинет">Войти</a>
       </li>
