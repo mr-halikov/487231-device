@@ -1,0 +1,31 @@
+.catalog-menu {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+  &__item {
+    display: inline-block;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: initial;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: @black;
+    &:visited {
+      color: @black;
+    }
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: .3;
+    }
+  }
+}

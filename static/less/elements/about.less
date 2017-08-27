@@ -1,0 +1,30 @@
+.about {
+  &__delivery-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__delivery-item {
+    position: relative;
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0 0 0 34px;
+    padding: 0;
+    color: @black;
+
+    &::before {
+      position: absolute;
+      box-sizing: border-box;
+      content: "";
+      top: 50%;
+      left: -34px;
+      width: 8px;
+      height: 8px;
+      border: solid 2px @whisper;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

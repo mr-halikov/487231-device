@@ -1,0 +1,37 @@
+.paginator {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: @gray92;
+  }
+  &__item {
+    display: inline-block;
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: @black;
+  }
+  &__link {
+    text-decoration: none;
+    color: @black;
+    opacity: .3;
+    &:visited {
+      color: @black;
+    }
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: 1;
+    }
+    &_fwd {
+      opacity: 1;
+    }
+    &_back {
+      opacity: 1;
+    }
+  }
+}

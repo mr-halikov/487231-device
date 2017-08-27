@@ -1,0 +1,55 @@
+.products {
+  &__title {
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: @black;
+  }
+  &__link {
+    text-decoration: none;
+    color: @black;
+    &:visited {
+      color: @black;
+    }
+  }
+  &__price {
+    font-family: Gilroy, OpenSans, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: @charcoal;
+  }
+
+  &__to-cart {
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    line-height: 22px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  &__to-compare {
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-size: 300;
+    line-height: 20px;
+    opacity: .5;
+    outline: none;
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      outline: dotted 1px @sunflower;
+      outline-offset: 5px;
+    }
+    &:active {
+      opacity: .2;
+      outline: none;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+.sort {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: @black;
+  }
+  &__item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  &__link {
+    text-decoration: none;
+    color: @black;
+    opacity: .3;
+    &:visited {
+      color: @black;
+      opacity: .3;
+    }
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}

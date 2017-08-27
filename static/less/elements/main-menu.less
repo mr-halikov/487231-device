@@ -1,12 +1,43 @@
 .main-menu {
+  &__list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #000000;
+  }
 
   &__item {
-    
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+
+    &_catalog:hover > .main-menu__catalog-menu {
+      display: block;
+    }
   }
+
+  &__link {
+    text-decoration: none;
+    color: @black;
+
+    &:visited {
+      color: @black;
+    }
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: .3;
+    }
+  }
+
+  &__catalog-menu {
+    display: none;
+  }
+
+
 }
