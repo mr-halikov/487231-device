@@ -1,9 +1,37 @@
 .header {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    margin: 40px auto 0 auto;
+    padding: 30px 60px 0 60px;
+    width: 100%;
+    max-width: 1160px;
+    background-color: @visVis;
+  }
+
   &__logo {
+    position: absolute;
+    top: -30px;
+    left: 58px;
     font-family: 'Gilroy', sans-serif;
     font-weight: 700;
     font-size: 48px;
     text-transform: uppercase;
+  }
+  &__top {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: @black;
+  }
+
+  &__search-form {
+    max-width: 500px;
   }
 
   &__logo-link {
@@ -21,12 +49,21 @@
     }
   }
 
-  &__top {
-    font-family: OpenSans, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: @black;
+  &__shop {
+    margin: 18px 0 0 0;
+    margin-left: auto;
   }
 
+  &__account {
+    margin: 18px 0 0 0;
+  }
+
+  &__bottom {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin: 31px 0 0 0;
+    padding-bottom: 50px;
+  }
 
 }

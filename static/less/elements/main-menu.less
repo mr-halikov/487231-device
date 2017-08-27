@@ -1,5 +1,10 @@
 .main-menu {
+  width: 100%;
+
   &__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -7,17 +12,45 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 4px;
   }
 
   &__item {
     margin: 0;
     padding: 0;
-    display: inline-block;
     position: relative;
+
+    &_catalog {
+      width: 540px;
+      flex-basis: auto;
+    }
+    &_catalog-list {
+      order: 99;
+      display: none;
+    }
+
+    &_delivery {
+      width: 160px;
+      flex-basis: auto;
+    }
+
+    &_waranty {
+      width: 160px;
+      flex-basis: auto;
+    }
+
+    &_contacts {
+      margin-left: auto;
+    }
+
+    &_catalog:hover {
+      padding-bottom: 115px;
+    }
 
     &_catalog:hover > .main-menu__catalog-menu {
       display: block;
     }
+
   }
 
   &__link {
@@ -33,11 +66,12 @@
     &:active {
       opacity: .3;
     }
+    &_contacts {
+      margin-right: -4px;
+    }
   }
 
   &__catalog-menu {
     display: none;
   }
-
-
 }
