@@ -1,11 +1,24 @@
 .section {
   &__title {
-    margin: 0;
+    margin: 55px 0 0 0;
     padding: 0;
     color: #000000;
     font-family: Gilroy;
     font-size: 47px;
     font-weight: 700;
+
+    &_dash {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        top: -50px;
+        left: 0;
+        width: 80px;
+        height: 7px;
+        background-color: @black;
+      }
+    }
   }
   &__text {
     font-family: OpenSans, Helvetica, Arial, sans-serif;

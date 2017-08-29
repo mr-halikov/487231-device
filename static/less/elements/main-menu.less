@@ -12,7 +12,7 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 3.5px;
   }
 
   &__item {
@@ -23,6 +23,7 @@
     &_catalog {
       width: 540px;
       flex-basis: auto;
+      margin-bottom: 114px;
     }
     &_catalog-list {
       order: 99;
@@ -44,7 +45,8 @@
     }
 
     &_catalog:hover {
-      padding-bottom: 115px;
+      margin-bottom: 0;
+      padding-bottom: 114px;
     }
 
     &_catalog:hover > .main-menu__catalog-menu {
@@ -54,18 +56,36 @@
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: @black;
 
     &:visited {
       color: @black;
     }
+
     &:hover {
       opacity: .6;
     }
+
     &:active {
       opacity: .3;
     }
+
+    &_catalog {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        right: -30px;
+        background-image: url('../img/svg/plus.svg');
+        background-repeat: no-repeat;
+        opacity: .3;
+      }
+    }
+
     &_contacts {
       margin-right: -4px;
     }

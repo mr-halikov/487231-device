@@ -1,16 +1,33 @@
 .popular {
   &__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     list-style-type: none;
-    margin: 0;
+    margin: 100px 0 0 0;
     padding: 0;
   }
   &__item {
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    width: 160px;
+    flex-basis: auto;
+    padding: 196px 0 0 0;
     font-family: Gilroy, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
     text-align: left;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 160px;
+      height: 160px;
+      background-color: @visVis;
+    }
   }
 
   &__link {
