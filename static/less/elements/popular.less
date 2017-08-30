@@ -7,28 +7,20 @@
     margin: 102px 0 0 0;
     padding: 0;
   }
+
   &__item {
     position: relative;
     display: inline-flex;
     width: 160px;
     flex-basis: auto;
-    padding: 196px 0 0 0;
+    padding: 195px 0 0 0;
     font-family: Gilroy, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
     text-align: left;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 160px;
-      height: 160px;
-      background-color: @visVis;
-    }
   }
+
 
   &__link {
     color: @black;
@@ -37,11 +29,75 @@
     &:visited {
       color: @black;
     }
+  }
+
+  &__item-title {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 160px;
+      height: 160px;
+      background-color: @visVis;
+    }
+
+    &_vr {
+      &::before {
+        background-image: url('../img/svg/popular-1.svg');
+        background-repeat: no-repeat;
+        background-position:  31px 52px;
+      }
+    }
+    &_monopode {
+      &::before {
+        background-image: url('../img/svg/popular-2.svg');
+        background-repeat: no-repeat;
+        background-position:  38px 41px;
+      }
+    }
+    &_action {
+      &::before {
+        background-image: url('../img/svg/popular-3.svg');
+        background-repeat: no-repeat;
+        background-position:  48px 38px;
+      }
+    }
+    &_fitness {
+      &::before {
+        background-image: url('../img/svg/popular-4.svg');
+        background-repeat: no-repeat;
+        background-position:  28px 50px;
+      }
+    }
+    &_smartwatch {
+      &::before {
+        background-image: url('../img/svg/popular-5.svg');
+        background-repeat: no-repeat;
+        background-position:  55px 32px;
+      }
+    }
+    &_quadcopter {
+      &::before {
+        background-image: url('../img/svg/popular-6.svg');
+        background-repeat: no-repeat;
+        background-position:  14px 49px;
+      }
+    }
+
+    &:hover::before {
+        background-color: @sunflower;
+      }
 
     &:active {
       opacity: .3;
     }
+
+    &:active::before {
+      &::before {
+        opacity: 1;
+        background-color: rgba(240, 197, 46, 1);
+      }
+    }
   }
-
-
 }
