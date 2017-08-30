@@ -59,11 +59,35 @@
     margin-top: -110px;
 
     &_01 {
+      &::before {
+        content: '01';
+        position: absolute;
+        top: -14px;
+        right: 46px;
+        font-family: Gilroy;
+        font-size: 179px;
+        font-weight: 700;
+        line-height: 180px;
+        letter-spacing: 2px;
+        color: @white;
+      }
       & img {
         margin-left: 90px;
       }
     }
-
+    &_02 {
+      &::before {
+        content: '02';
+        position: absolute;
+        top: -14px;
+        right: 46px;
+        font-family: Gilroy;
+        font-size: 179px;
+        font-weight: 700;
+        line-height: 180px;
+        letter-spacing: 2px;
+        color: @white;
+      }
   }
 
   &__image-wrapper {
@@ -72,6 +96,7 @@
 
   &__content-wrapper {
     width: 560px;
+    position: relative;
     box-sizing: border-box;
     margin-left: auto;
     padding-top: 78px;
