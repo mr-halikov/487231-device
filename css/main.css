@@ -523,33 +523,22 @@ body {
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
+  opacity: .3;
+}
+.footer__social-link:hover {
+  opacity: .6;
+}
+.footer__social-link:active {
+  opacity: .1;
 }
 .footer__social-link_fb {
   background-image: url('../img/icon/icon-fb.png');
 }
-.footer__social-link_fb:hover {
-  background-image: url('../img/icon/icon-fb-hover.png');
-}
-.footer__social-link_fb:active {
-  background-image: url('../img/icon/icon-fb-active.png');
-}
 .footer__social-link_insta {
   background-image: url('../img/icon/icon-insta.png');
 }
-.footer__social-link_insta:hover {
-  background-image: url('../img/icon/icon-insta-hover.png');
-}
-.footer__social-link_insta:active {
-  background-image: url('../img/icon/icon-insta-active.png');
-}
 .footer__social-link_twitter {
   background-image: url('../img/icon/icon-twitter.png');
-}
-.footer__social-link_twitter:hover {
-  background-image: url('../img/icon/icon-twitter-hover.png');
-}
-.footer__social-link_twitter:active {
-  background-image: url('../img/icon/icon-twitter-active.png');
 }
 .footer__credits {
   display: block;

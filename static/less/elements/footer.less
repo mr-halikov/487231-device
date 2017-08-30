@@ -108,7 +108,6 @@
   }
   &__shop-menu-link {
     position: relative;
-    //padding: 0 0 0 24px;
     text-decoration: none;
     color: @white;
 
@@ -191,32 +190,24 @@
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
+    opacity: .3;
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: .1;
+    }
+
     &_fb {
       background-image: url('../img/icon/icon-fb.png');
-      &:hover {
-        background-image: url('../img/icon/icon-fb-hover.png');
-      }
-      &:active {
-        background-image: url('../img/icon/icon-fb-active.png');
-      }
     }
+
     &_insta {
       background-image: url('../img/icon/icon-insta.png');
-      &:hover {
-        background-image: url('../img/icon/icon-insta-hover.png');
-      }
-      &:active {
-        background-image: url('../img/icon/icon-insta-active.png');
-      }
     }
+
     &_twitter {
       background-image: url('../img/icon/icon-twitter.png');
-      &:hover {
-        background-image: url('../img/icon/icon-twitter-hover.png');
-      }
-      &:active {
-        background-image: url('../img/icon/icon-twitter-active.png');
-      }
     }
   }
 
