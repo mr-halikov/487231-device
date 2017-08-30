@@ -333,8 +333,40 @@ body {
 .footer {
   background-color: #464646;
   color: #ffffff;
+  padding-bottom: 400px;
+}
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__row_bottom::after {
+  position: absolute;
+  content: '';
+  width: 80px;
+  height: 7px;
+  bottom: 16px;
+  left: 0;
+  background-color: #f0c52e;
+}
+.footer__col {
+  width: 360px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 .footer__logo {
+  margin: 54px 0 0 0;
   font-family: 'Gilroy', sans-serif;
   font-weight: 700;
   font-size: 48px;
@@ -357,20 +389,23 @@ body {
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 20px;
+  margin: 22px 0 0 0;
 }
 .footer__nav-list {
-  margin: 0;
+  margin: 23px 0 0 -5px;
   padding: 0;
   list-style-type: none;
   font-family: Gilroy, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  text-transform: uppercase;
 }
 .footer__nav-item {
-  margin: 0;
+  margin: 0 29px 0 0;
   padding: 0;
   display: inline-block;
+  letter-spacing: 3.5px;
 }
 .footer__nav-link {
   text-decoration: none;
@@ -387,7 +422,7 @@ body {
 }
 .footer__shop-menu {
   list-style-type: none;
-  margin: 0;
+  margin: 68px 0 0 0;
   padding: 0;
 }
 .footer__shop-menu-item {
@@ -395,10 +430,42 @@ body {
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 20px;
+  margin: 0 61px 0 0;
+  padding: 0;
+}
+.footer__shop-menu-item:nth-last-of-type(1) {
+  margin: 0;
 }
 .footer__shop-menu-link {
+  position: relative;
   text-decoration: none;
   color: #ffffff;
+}
+.footer__shop-menu-link::before {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+}
+.footer__shop-menu-link_basket::before {
+  top: 4px;
+  left: -22px;
+  background-image: url('../img/svg/cart-footer.svg');
+}
+.footer__shop-menu-link_compare::before {
+  top: 6px;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/svg/compare-footer.svg');
+}
+.footer__shop-menu-link_sign-in::before {
+  top: 4px;
+  left: -24px;
+  width: 13px;
+  height: 12px;
+  background-image: url('../img/svg/user-footer.svg');
 }
 .footer__shop-menu-link:visited {
   color: #ffffff;
@@ -410,11 +477,13 @@ body {
   opacity: .3;
 }
 .footer__phone {
+  display: inline-block;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 20px;
   text-decoration: none;
   color: #ffffff;
+  margin: 22px 0 0 0;
 }
 .footer__phone:visited {
   color: #ffffff;
@@ -427,11 +496,51 @@ body {
 }
 .footer__social-list {
   list-style-type: none;
-  margin: 0;
+  margin: 64px 0 0 26px;
   padding: 0;
 }
 .footer__social-item {
   display: inline-block;
+  margin: 0 10px 0 9px;
+}
+.footer__social-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+}
+.footer__social-link_fb {
+  background-image: url('../img/icon/icon-fb.png');
+}
+.footer__social-link_fb:hover {
+  background-image: url('../img/icon/icon-fb-hover.png');
+}
+.footer__social-link_insta {
+  background-image: url('../img/icon/icon-insta.png');
+}
+.footer__social-link_insta:hover {
+  background-image: url('../img/icon/icon-insta-hover.png');
+}
+.footer__social-link_twitter {
+  background-image: url('../img/icon/icon-twitter.png');
+}
+.footer__social-link_twitter:hover {
+  background-image: url('../img/icon/icon-twitter-hover.png');
+}
+.footer__credits {
+  display: block;
+  width: 27px;
+  height: 35px;
+  margin: 63px 0 0 0;
+  background-image: url('../img/svg/logo-html.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.footer__credits:hover {
+  opacity: .6;
+}
+.footer__credits:active {
+  opacity: .3;
 }
 .header__container {
   display: -webkit-box;
