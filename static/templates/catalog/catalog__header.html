@@ -1,4 +1,86 @@
-<header class="page__header">
+<header class="page__header header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a class="header__logo-link" href="index.html">
+        Device
+      </a>
+    </div>
+    <div class="header__top">
+      <form class="header__search-form search" id="search-form">
+        <input type="search" class="search__input" id="search" name="search">
+        <label for="search" class="search__label">Поиск по сайту</label>
+        <button class="search__submit"
+                type="submit"
+                form="search-form"
+                formaction="/search"
+                formmethod="post">Найти
+        </button>
+      </form>
+      <div class="header__account">
+        <ul class="account__menu-list">
+          <li class="account__menu-item">
+            <a href="#" class="account__menu-link account__menu-link_sign-in">Войти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__shop">
+        <ul class="shop__menu-list">
+          <li class="shop__menu-item">
+            <a href="" class="shop__menu-link shop__menu-link_compare">Сравнить</a>
+          </li>
+          <li class="shop__menu-item">
+            <a href="" class="shop__menu-link shop__menu-link_basket">Корзина</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <nav class="header__main-menu main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item main-menu__item_catalog">
+            <a href="catalog.html" class="main-menu__link main-menu__link_catalog" title="Каталог">Каталог товаров</a>
+            <ul class="main-menu__catalog-menu catalog-menu__list">
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Виртуальная реальность">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Фитнес-браслеты">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Квадрокоптеры">Квадрокоптеры</a>
+              </li><br>
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Моноподы для селфи">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Умные часы">Умные часы</a>
+              </li><br>
+              <li class="catalog-menu__item">
+                <a href="" class="catalog-menu__link" title="Экшн-камеры">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item main-menu__item_delivery">
+            <a href="" class="main-menu__link" title="Доставка">Доставка</a>
+          </li>
+          <li class="main-menu__item main-menu__item_warranty">
+            <a href="" class="main-menu__link" title="Гарантия">Гарантия</a>
+          </li>
+          <li class="main-menu__item main-menu__item_contacts">
+            <a href="" class="main-menu__link main-menu__link_contacts" title="Контакты">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<!-- <header class="page__header">
   <div class="l-wrapper l-wrapper_header">
     <div class="header__logo">
       <a class="header__logo-link" href="index.html" title="Device: Главная">
@@ -76,4 +158,4 @@
       </nav>
     </div>
   </div>
-</header>
+</header> -->
