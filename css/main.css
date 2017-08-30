@@ -523,33 +523,22 @@ body {
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
+  opacity: .3;
+}
+.footer__social-link:hover {
+  opacity: .6;
+}
+.footer__social-link:active {
+  opacity: .1;
 }
 .footer__social-link_fb {
   background-image: url('../img/icon/icon-fb.png');
 }
-.footer__social-link_fb:hover {
-  background-image: url('../img/icon/icon-fb-hover.png');
-}
-.footer__social-link_fb:active {
-  background-image: url('../img/icon/icon-fb-active.png');
-}
 .footer__social-link_insta {
   background-image: url('../img/icon/icon-insta.png');
 }
-.footer__social-link_insta:hover {
-  background-image: url('../img/icon/icon-insta-hover.png');
-}
-.footer__social-link_insta:active {
-  background-image: url('../img/icon/icon-insta-active.png');
-}
 .footer__social-link_twitter {
   background-image: url('../img/icon/icon-twitter.png');
-}
-.footer__social-link_twitter:hover {
-  background-image: url('../img/icon/icon-twitter-hover.png');
-}
-.footer__social-link_twitter:active {
-  background-image: url('../img/icon/icon-twitter-active.png');
 }
 .footer__credits {
   display: block;
@@ -795,21 +784,12 @@ body {
   width: 160px;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
-  padding: 196px 0 0 0;
+  padding: 195px 0 0 0;
   font-family: Gilroy, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
   text-align: left;
-}
-.popular__item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 160px;
-  height: 160px;
-  background-color: #F7E296;
 }
 .popular__link {
   color: #000000;
@@ -818,8 +798,54 @@ body {
 .popular__link:visited {
   color: #000000;
 }
-.popular__link:active {
+.popular__item-title::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #F7E296;
+}
+.popular__item-title_vr::before {
+  background-image: url('../img/svg/popular-1.svg');
+  background-repeat: no-repeat;
+  background-position: 31px 52px;
+}
+.popular__item-title_monopode::before {
+  background-image: url('../img/svg/popular-2.svg');
+  background-repeat: no-repeat;
+  background-position: 38px 41px;
+}
+.popular__item-title_action::before {
+  background-image: url('../img/svg/popular-3.svg');
+  background-repeat: no-repeat;
+  background-position: 48px 38px;
+}
+.popular__item-title_fitness::before {
+  background-image: url('../img/svg/popular-4.svg');
+  background-repeat: no-repeat;
+  background-position: 28px 50px;
+}
+.popular__item-title_smartwatch::before {
+  background-image: url('../img/svg/popular-5.svg');
+  background-repeat: no-repeat;
+  background-position: 55px 32px;
+}
+.popular__item-title_quadcopter::before {
+  background-image: url('../img/svg/popular-6.svg');
+  background-repeat: no-repeat;
+  background-position: 14px 49px;
+}
+.popular__item-title:hover::before {
+  background-color: #f0c52e;
+}
+.popular__item-title:active {
   opacity: .3;
+}
+.popular__item-title:active::before::before {
+  opacity: 1;
+  background-color: #f0c52e;
 }
 .products__title {
   font-family: Gilroy, sans-serif;
