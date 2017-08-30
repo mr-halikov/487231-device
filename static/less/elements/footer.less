@@ -1,13 +1,14 @@
 .footer {
   background-color: @charcoal;
   color: @white;
-  padding-bottom: 400px;
+  padding-bottom: 63px;
 
   &__row {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    box-sizing: border-box;
     &_bottom {
       &::after {
         position: absolute;
@@ -195,17 +196,26 @@
       &:hover {
         background-image: url('../img/icon/icon-fb-hover.png');
       }
+      &:active {
+        background-image: url('../img/icon/icon-fb-active.png');
+      }
     }
     &_insta {
       background-image: url('../img/icon/icon-insta.png');
       &:hover {
         background-image: url('../img/icon/icon-insta-hover.png');
       }
+      &:active {
+        background-image: url('../img/icon/icon-insta-active.png');
+      }
     }
     &_twitter {
       background-image: url('../img/icon/icon-twitter.png');
       &:hover {
         background-image: url('../img/icon/icon-twitter-hover.png');
+      }
+      &:active {
+        background-image: url('../img/icon/icon-twitter-active.png');
       }
     }
   }
