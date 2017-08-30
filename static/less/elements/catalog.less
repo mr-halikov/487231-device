@@ -3,6 +3,7 @@
   &__sidebar {
     display: inline-flex;
     flex-basis: auto;
+    flex-direction: column;
     width: 328px;
   }
 
@@ -12,7 +13,12 @@
     flex-direction: column;
     width: 780px;
     margin-left: auto;
+  }
 
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
 }
