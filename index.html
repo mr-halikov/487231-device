@@ -9,6 +9,26 @@
 </head>
 <body>
 
+<!--
+
+TODO:
+
+Блок слайдер
+- Оформление слайдов
+
+Блок популярные продукты:
+состояние active
+
+
+
+
+
+
+-->
+
+
+
+
 <header class="page__header header">
   <div class="header__container">
     <div class="header__logo">
@@ -225,36 +245,40 @@
       <section class="services">
         <div class="services__controls">
           <ul class="services__controls_list">
-            <li class="btn services__controls_item">Доставка</li>
-            <li class="btn services__controls_item">Гарантия</li>
-            <li class="btn services__controls_item">Кредит</li>
+            <li class="services__controls_item">
+              <button class="btn services__button services__button_active">Доставка</button>
+            </li>
+            <li class="services__controls_item">
+              <button class="btn services__button">Гарантия</button>
+            </li>
+            <li class="services__controls_item">
+              <button class="btn services__button">Кредит</button>
+            </li>
           </ul>
         </div>
         <div class="services__content">
-          <article class="services__item_delivery m-show">
+          <article class="services__item services__item_delivery">
             <h2 class="heading services__heading">Доставка</h2>
             <p class="services__text">
               Мы с удовольствием доставим ваш товар прямо к вашему <br>
               подъезду совершенно бесплатно! Ведь мы неплохо <br>
               заработаем, поднимая его на ваш этаж.
             </p>
-      
           </article>
           <article class="services__item services__item_warranty">
             <h2 class="heading services__heading">Гарантия</h2>
             <p class="services__text">
-              Залезть в долговую яму стало проще! Кредитные <br>
-              консультанты подберут для вас наиболее выгодные <br>
-              условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
-      
-          </article>
-          <article class="services__item services__item_credit">
-            <h2 class="heading services__heading">Кредит</h2>
-            <p class="services__text">
               Если из-за возгорания купленного у нас товара у вас сгорит <br>
               дом — не переживайте, мы выдадим вам новый. <br>
               Товар, не дом, конечно же.
+            </p>
+          </article>
+          <article class="services__item services__item_credit m-show">
+            <h2 class="heading services__heading">Кредит</h2>
+            <p class="services__text">
+              Залезть в долговую яму стало проще! Кредитные <br>
+              консультанты подберут для вас наиболее выгодные <br>
+              условия кредита. Выгодные для нашего банка, разумеется.
             </p>
           </article>
         </div>
