@@ -1,4 +1,6 @@
 .brands {
+  margin: 88px 0 0 0;
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -8,8 +10,49 @@
   }
   &__item {
     display: inline-flex;
-    width: 246px;
+    //width: 246px;
     margin: 0;
     padding: 0;
+  }
+  &__logo {
+    display: block;
+    width: 260px;
+    height: 100px;
+
+    &_dji {
+      background-image: url('../img/brands/logo-dji.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        background-image: url('../img/brands/logo-dji-hover.png');
+      }
+    }
+
+    &_gopro {
+      background-image: url('../img/brands/logo-gopro.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        background-image: url('../img/brands/logo-gopro-hover.png');
+      }
+    }
+
+    &_spgadgets {
+      background-image: url('../img/brands/logo-spgadgets.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        background-image: url('../img/brands/logo-spgadgets-hover.png');
+      }
+    }
+
+    &_vive {
+      background-image: url('../img/brands/logo-vive.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        background-image: url('../img/brands/logo-vive-hover.png');
+      }
+    }
   }
 }
