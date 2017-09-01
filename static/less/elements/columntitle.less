@@ -1,7 +1,39 @@
 .columntitle {
-
-  display: inline-flex;
+  position: relative;
+  display: flex;
   width: 100%;
+  background-color: @gainsboro;
+
+  &_sort {
+    background-color: @gray92;
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 50vw;
+      height: 100%;
+      top: 0;
+      right: 0;
+      transform: translateX(90%);
+      background-color: @gray92;
+      z-index: -1;
+    }
+  }
+
+  &_filter {
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 50vw;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: @gainsboro;
+      z-index: -1;
+    }
+  }
+
 
   &__heading {
     font-family: Gilroy, sans-serif;
@@ -11,6 +43,15 @@
     color: @black;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin: 25px 0 25px 0;
+    margin: 25px 0 25px 60px;
+
+    &_sort {
+      margin-left: 80px;
+      letter-spacing: 3.5px;
+    }
   }
+
 }
+
+
+// 1160 / 330  / 830

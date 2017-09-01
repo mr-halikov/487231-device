@@ -51,6 +51,7 @@
 
   &__item {
     display: none;
+    min-height: 501px;
 
     &::before {
       position: absolute;
@@ -73,6 +74,7 @@
       line-height: 180px;
       letter-spacing: 2px;
       color: @white;
+      z-index: -1;
     }
 
 /* ==============  SLIDE 1 ============== */
@@ -92,6 +94,22 @@
     &_02 {
       &::after {
         content: '02';
+      }
+
+      & img {
+        margin: 12px 0 0 116px;
+      }
+    }
+
+/* ==============  SLIDE 2 ============== */
+
+    &_03 {
+      &::after {
+        content: '03';
+      }
+
+      & img {
+        margin: 65px 0 0 31px;
       }
     }
   }
@@ -151,9 +169,18 @@
   }
 
   &__details-item {
-    display: inline-block;
-    margin: 0 75px 0 0 ;
+    display: inline-flex;
+    flex-basis: auto;
+    flex-direction: column;
+    margin: 0;
     padding: 0;
+
+    &:first-of-type {
+      width: 155px;
+    }
+    &:nth-of-type(2) {
+      width: 135px;
+    }
   }
 
   &__details-item_content {
