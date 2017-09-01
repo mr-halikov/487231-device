@@ -3,12 +3,7 @@
 * Студент: [Дмитрий Халиков](https://up.htmlacademy.ru/htmlcss/18/user/487231).
 * Наставник: `Мурат Баркинхоев`.
 
----
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitignore`, `Contributing.md`, `Readme.md`._
-
----
 
 ### Памятка
 
