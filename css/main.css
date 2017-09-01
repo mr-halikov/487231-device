@@ -1081,6 +1081,27 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.products__item_new::before {
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: 'new';
+  width: 60px;
+  height: 60px;
+  padding: 20px 0 0 0;
+  top: 29px;
+  right: 27px;
+  border: 2px solid #000000;
+  border-radius: 50% 50%;
+  color: #000000;
+  opacity: .2;
+  font-family: Gilroy, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
 .products__description {
   display: -webkit-box;
   display: -ms-flexbox;

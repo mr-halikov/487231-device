@@ -23,6 +23,29 @@
     &:hover > .products__actions {
       display: flex;
     }
+
+    &_new {
+      &::before {
+        position: absolute;
+        display: block;
+        box-sizing: border-box;
+        content: 'new';
+        width: 60px;
+        height: 60px;
+        padding: 20px 0 0 0;
+        top: 29px;
+        right: 27px;
+        border: 2px solid @black;
+        border-radius: 50% 50%;
+        color: @black;
+        opacity: .2;
+        font-family: Gilroy, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
   }
 
   &__description {
