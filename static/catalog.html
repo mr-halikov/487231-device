@@ -40,10 +40,22 @@
       <div class="filter__wrapper">
         <fieldset class="filter__fieldset">
           <legend class="filter__caption">Стоимость</legend>
-          <input class="filter__input-range" type="range" id="filter-range-min" min="0" max="10000" step="100" name="filter-in-min">
-          <input class="filter__input-range" type="range" id="filter-range-max" min="0" max="10000" step="100" name="filter-range">
-          <label class="filter__label-range_min" for="filter-range-min">0</label>
-          <label class="filter__label-range_max" for="filter-range-max">10000</label>
+
+          <div class="filter__range-wrapper">
+            <div class="filter__range-slider">
+              <div class="filter__range-stripe"></div>
+              <div class="filter__range-handle filter__range-handle_left"></div>
+              <div class="filter__range-handle filter__range-handle_right"></div>
+            </div>
+
+            <label class="filter__range-label filter__range-label_min" for="price-controls-min">от 0
+              <input id="price-controls-min" class="filter__range-input filter__range-input_min" name="price" type="text" maxlength="8" value="">
+            </label>
+            <label class="filter__range-label filter__range-label_max" for="price-controls-max">до 5000
+              <input id="price-controls-max" class="filter__range-input filter__range-input_max" name="price" type="text" maxlength="8" value="">
+            </label>
+          </div>
+
         </fieldset>
       </div>
 
