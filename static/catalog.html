@@ -37,55 +37,62 @@
 
     <form id="filter-form" class="filter__form" name="filter-form">
 
-      <fieldset class="filter__fieldset">
-        <legend class="filter__fieldset-caption">Стоимость</legend>
-        <input class="filter__input-range" type="range" id="filter-range-min" min="0" max="10000" step="100" name="filter-in-min">
-        <input class="filter__input-range" type="range" id="filter-range-max" min="0" max="10000" step="100" name="filter-range">
-        <label class="filter__label-range_min" for="filter-range-min">0</label>
-        <label class="filter__label-range_max" for="filter-range-max">10000</label>
-      </fieldset>
+      <div class="filter__wrapper">
+        <fieldset class="filter__fieldset">
+          <legend class="filter__caption">Стоимость</legend>
+          <input class="filter__input-range" type="range" id="filter-range-min" min="0" max="10000" step="100" name="filter-in-min">
+          <input class="filter__input-range" type="range" id="filter-range-max" min="0" max="10000" step="100" name="filter-range">
+          <label class="filter__label-range_min" for="filter-range-min">0</label>
+          <label class="filter__label-range_max" for="filter-range-max">10000</label>
+        </fieldset>
+      </div>
 
-      <fieldset class="filter__fieldset">
-        <legend class="filter__fieldset-caption">Цвет</legend>
-        <ul class="filter__fieldset-list">
-          <li class="filter__item">
-            <input class="filter__input-checkbox" id="filter-black" type="checkbox" name="color">
-            <label for="filter-black" class="filter__label">Черный</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__input-checkbox" id="filter-white" type="checkbox" name="color">
-            <label for="filter-white" class="filter__label">Белый</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__input-checkbox" id="filter-blue" type="checkbox" name="color">
-            <label for="filter-blue" class="filter__label">Синий</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__input-checkbox" id="filter-red" type="checkbox" name="color">
-            <label for="filter-red" class="filter__label">Красный</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__input-checkbox" id="filter-pink" type="checkbox" name="color">
-            <label for="filter-pink" class="filter__label">Розовый</label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="filter__wrapper">
+        <fieldset class="filter__fieldset">
+          <legend class="filter__caption">Цвет</legend>
+          <ul class="filter__fieldset-list">
+            <li class="filter__item filter__item_color">
+              <input class="filter__input-checkbox" id="filter-black" type="checkbox" name="color">
+              <label for="filter-black" class="filter__label filter__label_color">Черный</label>
+            </li>
+            <li class="filter__item filter__item_color">
+              <input class="filter__input-checkbox" id="filter-white" type="checkbox" name="color">
+              <label for="filter-white" class="filter__label filter__label_color">Белый</label>
+            </li>
+            <li class="filter__item filter__item_color">
+              <input class="filter__input-checkbox" id="filter-blue" type="checkbox" name="color">
+              <label for="filter-blue" class="filter__label filter__label_color">Синий</label>
+            </li>
+            <li class="filter__item filter__item_color">
+              <input class="filter__input-checkbox" id="filter-red" type="checkbox" name="color">
+              <label for="filter-red" class="filter__label filter__label_color">Красный</label>
+            </li>
+            <li class="filter__item filter__item_color">
+              <input class="filter__input-checkbox" id="filter-pink" type="checkbox" name="color">
+              <label for="filter-pink" class="filter__label filter__label_color">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
 
-      <fieldset class="filter__fieldset">
-        <legend class="filter__fieldset-caption">Bluetooth</legend>
-        <ul class="filter__fieldset-list">
-          <li class="filter__item">
-            <input class="filter__input-radio" id="filter-bluetooth" type="radio" name="bluetooth" checked>
-            <label for="filter-bluetooth" class="filter__label">Есть</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__input-radio" id="filter-no-bluetooth" type="radio" name="bluetooth">
-            <label for="filter-no-bluetooth" class="filter__label">Нет</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="btn filter__submit" type="submit" formaction="/getform" formmethod="post">Показать</button>
-    </form>
+      <div class="filter__wrapper">
+        <fieldset class="filter__fieldset">
+          <legend class="filter__caption">Bluetooth</legend>
+          <ul class="filter__fieldset-list">
+            <li class="filter__item">
+              <input class="filter__input-radio" id="filter-bluetooth" type="radio" name="bluetooth" checked>
+              <label for="filter-bluetooth" class="filter__label filter__label_bluetooth">Есть</label>
+            </li>
+            <li class="filter__item">
+              <input class="filter__input-radio" id="filter-no-bluetooth" type="radio" name="bluetooth">
+              <label for="filter-no-bluetooth" class="filter__label filter__label_bluetooth">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        </div>
+        <button class="btn filter__submit" type="submit" formaction="/getform" formmethod="post">Показать</button>
+      </form>
+
 
   </aside>
 

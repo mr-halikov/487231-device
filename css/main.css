@@ -453,11 +453,25 @@ body {
   padding-right: 38px;
   letter-spacing: 3.5px;
 }
+.filter__form {
+  margin: 69px 70px 0 59px;
+  padding: 0;
+  border-top: solid 2px #000000;
+}
+.filter__wrapper {
+  padding: 10px 0 21px 0;
+  border-bottom: solid 2px #000000;
+}
+.filter__wrapper:last-of-type {
+  padding: 10px 0 19px 0;
+}
 .filter__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
-.filter__fieldset-caption {
-  margin: 0;
+.filter__caption {
+  margin: 15px 0 0 0;
   padding: 0;
   font-family: Gilroy, sans-serif;
   font-weight: 700;
@@ -466,22 +480,78 @@ body {
   color: #000000;
 }
 .filter__fieldset-list {
-  margin: 0;
+  margin: 28px 0 0 0;
   padding: 0;
+  list-style-type: none;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
   color: #000000;
 }
+.filter__item {
+  position: relative;
+  margin: 0 0 20px 0;
+}
+.filter__input-checkbox {
+  position: absolute;
+  left: -1000;
+  visibility: hidden;
+}
+.filter__input-checkbox:checked ~ .filter__label_color::before {
+  width: 27px;
+  top: -3px;
+  left: 0;
+  background-image: url('../img/svg/checkbox-on.svg');
+}
+.filter__input-radio {
+  position: absolute;
+  left: -1000;
+  visibility: hidden;
+}
+.filter__input-radio:checked ~ .filter__label_bluetooth::before {
+  background-image: url('../img/svg/radio-on.svg');
+}
+.filter__label {
+  padding: 0 0 0 39px;
+  position: relative;
+}
+.filter__label_color::before {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: -3px;
+  left: 0;
+  background-image: url('../img/svg/checkbox-off.svg');
+  background-repeat: no-repeat;
+}
+.filter__label_bluetooth::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -3px;
+  left: -1px;
+  background-image: url('../img/svg/radio-off.svg');
+  background-repeat: no-repeat;
+}
 .filter__submit {
   border: none;
   background: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 201px;
   line-height: 22px;
-  padding-left: 42px;
-  padding-right: 42px;
+  letter-spacing: 3.5px;
+  z-index: 1;
+  outline: none;
+}
+.filter__submit:focus {
+  outline: none;
+}
+.filter__submit:active {
+  outline: none;
 }
 .footer {
   background-color: #464646;

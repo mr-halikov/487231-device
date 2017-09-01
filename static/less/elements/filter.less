@@ -1,11 +1,29 @@
 .filter {
 
+  &__form {
+    margin: 69px 70px 0 59px;
+    padding: 0;
+    border-top: solid 2px @black;
+  }
+
+  &__wrapper {
+    padding: 10px 0 21px 0;
+    border-bottom: solid 2px @black;
+
+    &:last-of-type {
+      padding: 10px 0 19px 0;
+    }
+  }
+
 
   &__fieldset {
+    margin: 0;
+    padding: 0;
     border: none;
   }
-  &__fieldset-caption {
-    margin: 0;
+
+  &__caption {
+    margin: 15px 0 0 0;
     padding: 0;
     font-family: Gilroy, sans-serif;
     font-weight: 700;
@@ -13,21 +31,94 @@
     line-height: 24px;
     color: @black;
   }
+
   &__fieldset-list {
-    margin: 0;
+    margin: 28px 0 0 0;
     padding: 0;
+    list-style-type: none;
     font-family: OpenSans, Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
     color: @black;
   }
+
+  &__item {
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+
+  &__input-checkbox {
+    position: absolute;
+    left: -1000;
+    visibility: hidden;
+    &:checked ~ .filter__label_color {
+      &::before {
+        width: 27px;
+        top: -3px;
+        left: 0;
+        background-image: url('../img/svg/checkbox-on.svg');
+      }
+    }
+  }
+
+  &__input-radio {
+    position: absolute;
+    left: -1000;
+    visibility: hidden;
+
+    &:checked ~ .filter__label_bluetooth {
+      &::before {
+        background-image: url('../img/svg/radio-on.svg');
+      }
+    }
+  }
+
+  &__label {
+    padding: 0 0 0 39px;
+    position: relative;
+
+    &_color {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        top: -3px;
+        left: 0;
+        background-image: url('../img/svg/checkbox-off.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    &_bluetooth {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: -3px;
+        left: -1px;
+        background-image: url('../img/svg/radio-off.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
   &__submit {
     border: none;
     background: none;
     box-sizing: border-box;
+    max-width: 201px;
     line-height: 22px;
-    padding-left: 42px;
-    padding-right: 42px;
+    letter-spacing: 3.5px;
+    z-index: 1;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
   }
 }
