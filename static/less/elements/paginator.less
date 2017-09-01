@@ -1,11 +1,20 @@
 .paginator {
+
+  margin: 39px 0 0 70px;
+
   &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style-type: none;
     background-color: @gray92;
   }
+
   &__item {
+    margin: 0;
+    padding: 0;
     display: inline-block;
     font-family: Gilroy, sans-serif;
     font-size: 16px;
@@ -14,10 +23,15 @@
     text-transform: uppercase;
     color: @black;
   }
+
   &__link {
+    display: inline-block;
+    padding: 26px 0 25px 0;
     text-decoration: none;
+    letter-spacing: 3.5px;
     color: @black;
     opacity: .3;
+
     &:visited {
       color: @black;
     }
@@ -27,11 +41,57 @@
     &:active {
       opacity: 1;
     }
-    &_fwd {
-      opacity: 1;
-    }
+
+    &_fwd,
     &_back {
+      position: relative;
       opacity: 1;
+      padding-left: 30px;
+      padding-right: 30px;
+      z-index: 1;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        &::before {
+          background-color: #d9d9d9;
+        }
+      }
+
+      &:active {
+        color: #979797;
+
+        &::before {
+          background-color: #d9d9d9;
+        }
+      }
+    }
+  }
+
+  &__pages {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0 0 0 12px;
+    padding: 0;
+  }
+
+  &__page {
+    margin: 0 27px 0 0;
+
+    &:last-of-type {
+      margin: 0;
     }
   }
 }

@@ -1,12 +1,25 @@
 .catalog {
 
   &__sidebar {
+    position: relative;
     display: inline-flex;
     flex-basis: auto;
     flex-direction: column;
     width: 330px;
     background-color: #efefef;
     margin: 48px 0 0 0;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 50vw;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: #efefef;
+      z-index: -1;
+    }
   }
 
   &__heading {
@@ -21,7 +34,7 @@
     width: 830px;
     margin: 48px 0 0 0;
     margin-left: auto;
-
+    padding: 0 0 73px 0;
   }
 
   &__content {
