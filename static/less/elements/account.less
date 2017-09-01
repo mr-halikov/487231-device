@@ -26,6 +26,21 @@
     &:active {
       opacity: .3;
     }
+
+    &_profile {
+      margin: 0 0 0 27px;
+      letter-spacing: 0;
+
+      &::before {
+        top: 4px;
+        left: -26px;
+        width: 12px;
+        height: 12px;
+        background-image: url('../img/svg/user.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
     &_sign-in {
       margin: 0 0 0 27px;
       &::before {
@@ -35,6 +50,19 @@
         height: 12px;
         background-image: url('../img/svg/user.svg');
         background-repeat: no-repeat;
+      }
+    }
+
+    &_sign-out {
+      margin-left: 12px;
+      opacity: .3;
+
+      &:hover {
+        opacity: .6;
+      }
+
+      &:active {
+        opacity: 1;
       }
     }
   }

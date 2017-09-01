@@ -185,6 +185,18 @@ body {
 .account__menu-link:active {
   opacity: .3;
 }
+.account__menu-link_profile {
+  margin: 0 0 0 27px;
+  letter-spacing: 0;
+}
+.account__menu-link_profile::before {
+  top: 4px;
+  left: -26px;
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/svg/user.svg');
+  background-repeat: no-repeat;
+}
 .account__menu-link_sign-in {
   margin: 0 0 0 27px;
 }
@@ -195,6 +207,16 @@ body {
   height: 12px;
   background-image: url('../img/svg/user.svg');
   background-repeat: no-repeat;
+}
+.account__menu-link_sign-out {
+  margin-left: 12px;
+  opacity: .3;
+}
+.account__menu-link_sign-out:hover {
+  opacity: .6;
+}
+.account__menu-link_sign-out:active {
+  opacity: 1;
 }
 .brands {
   margin: 88px 0 0 0;
