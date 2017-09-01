@@ -9,6 +9,8 @@
 </head>
 <body>
 
+
+
 <header class="page__header header">
   <div class="header__container">
     <div class="header__logo">
@@ -142,7 +144,8 @@
           </div>
           <div class="slider__content-wrapper">
             <h2 class="heading slider__heading">
-              Худеем правильно!
+              Худеем<br>
+              правильно!
             </h2>
             <p class="slider__description">
               Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
@@ -225,36 +228,40 @@
       <section class="services">
         <div class="services__controls">
           <ul class="services__controls_list">
-            <li class="btn services__controls_item">Доставка</li>
-            <li class="btn services__controls_item">Гарантия</li>
-            <li class="btn services__controls_item">Кредит</li>
+            <li class="services__controls_item">
+              <button class="btn services__button services__button_active">Доставка</button>
+            </li>
+            <li class="services__controls_item">
+              <button class="btn services__button">Гарантия</button>
+            </li>
+            <li class="services__controls_item">
+              <button class="btn services__button">Кредит</button>
+            </li>
           </ul>
         </div>
         <div class="services__content">
-          <article class="services__item_delivery m-show">
+          <article class="services__item services__item_delivery">
             <h2 class="heading services__heading">Доставка</h2>
             <p class="services__text">
               Мы с удовольствием доставим ваш товар прямо к вашему <br>
               подъезду совершенно бесплатно! Ведь мы неплохо <br>
               заработаем, поднимая его на ваш этаж.
             </p>
-      
           </article>
           <article class="services__item services__item_warranty">
             <h2 class="heading services__heading">Гарантия</h2>
             <p class="services__text">
-              Залезть в долговую яму стало проще! Кредитные <br>
-              консультанты подберут для вас наиболее выгодные <br>
-              условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
-      
-          </article>
-          <article class="services__item services__item_credit">
-            <h2 class="heading services__heading">Кредит</h2>
-            <p class="services__text">
               Если из-за возгорания купленного у нас товара у вас сгорит <br>
               дом — не переживайте, мы выдадим вам новый. <br>
               Товар, не дом, конечно же.
+            </p>
+          </article>
+          <article class="services__item services__item_credit m-show">
+            <h2 class="heading services__heading">Кредит</h2>
+            <p class="services__text">
+              Залезть в долговую яму стало проще! Кредитные <br>
+              консультанты подберут для вас наиболее выгодные <br>
+              условия кредита. Выгодные для нашего банка, разумеется.
             </p>
           </article>
         </div>
@@ -265,22 +272,26 @@
         <ul class="brands__list">
           <li class="brands__item">
             <a href="" class="brands__link" title="Производитель: DJI">
-              <img src="" alt="Производитель: DJI" class="brands__logo brands__logo_dji">
+              <div class="brands__logo brands__logo_dji">
+              </div>
             </a>
           </li>
           <li class="brands__item">
             <a href="" class="brands__link" title="Производитель: SP Gadgets">
-              <img src="" alt="Производитель: SP Gadgets" class="brands__logo brands__logo spgadjets">
+              <div class="brands__logo brands__logo_spgadgets">
+              </div>
             </a>
           </li>
           <li class="brands__item">
             <a href="" class="brands__link" title="Производитель: GoPro">
-              <img src="" alt="Производитель: GoPro" class="brands__logo brands__logo_gopro">
+              <div class="brands__logo brands__logo_gopro">
+              </div>
             </a>
           </li>
           <li class="brands__item">
             <a href="" class="brands__link" title="Производитель: Vive">
-              <img src="" alt="Производитель: Vive" class="brands__logo brands__logo_vive">
+              <div class="brands__logo brands__logo_vive">
+              </div>
             </a>
           </li>
         </ul>
@@ -289,31 +300,31 @@
     <div class="container about__container">
       <section class="about">
         <h2 class="section__title section__title_dash about__title">О нас</h2>
-        <p class="section__text">
-          Огромный выбор гаджетов не оставит равнодушным гика,
+        <p class="section__text about__text">
+          Огромный выбор гаджетов не оставит равнодушным гика,<br>
           который есть в каждом из нас.
         </p>
-        <p class="section__text">
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-          DEVICE работает со многими транспортными компаниями:
+        <p class="section__text about__text">
+          Мы можем доставить ваш товар в самые отдаленные точки<br>
+          России! DEVICE работает со многими транспортными компаниями:
         </p>
         <ul class="section__list_delivery about__delivery-list">
           <li class="about__delivery-item">Деловые Линии</li>
           <li class="about__delivery-item">Автотрейдинг</li>
           <li class="about__delivery-item">ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="btn" title="Подробнее о компании">Подробнее о нас</a>
+        <a href="#" class="btn about__button" title="Подробнее о компании">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="section__title section__title_dash contacts__title">Контакты</h2>
-        <p class="section__text">
+        <p class="section__text contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.
         </p>
         <a href="" class="contacts__map-link" title="Схема проезда">
-          <img src="" alt="Схема проезда" class="contacts__image">
+          <img src="img/map.png" alt="Схема проезда" class="contacts__image">
         </a>
-        <a href="#" class="btn" title="Напишите нам">Напишите нам</a>
+        <a href="#" class="btn contacts__button" title="Напишите нам">Напишите нам</a>
       </section>
     </div>
   </main>
