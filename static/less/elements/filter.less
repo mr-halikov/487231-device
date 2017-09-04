@@ -147,6 +147,9 @@
         background-image: url('../img/svg/checkbox-on.svg');
       }
     }
+    &:disabled ~ .filter__label_color {
+      opacity: .3;
+    }
   }
 
   &__input-radio {
@@ -158,6 +161,10 @@
       &::before {
         background-image: url('../img/svg/radio-on.svg');
       }
+    }
+
+    &:disabled ~ .filter__label_bluetooth {
+      opacity: .3;
     }
   }
 

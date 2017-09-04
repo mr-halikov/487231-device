@@ -586,6 +586,9 @@ body {
   left: 0;
   background-image: url('../img/svg/checkbox-on.svg');
 }
+.filter__input-checkbox:disabled ~ .filter__label_color {
+  opacity: .3;
+}
 .filter__input-radio {
   position: absolute;
   left: -1000;
@@ -593,6 +596,9 @@ body {
 }
 .filter__input-radio:checked ~ .filter__label_bluetooth::before {
   background-image: url('../img/svg/radio-on.svg');
+}
+.filter__input-radio:disabled ~ .filter__label_bluetooth {
+  opacity: .3;
 }
 .filter__label {
   padding: 0 0 0 39px;
