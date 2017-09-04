@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DEVICE: Главная</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,13 +22,14 @@
     <div class="header__top">
       <form class="header__search-form search" id="search-form">
         <input type="search" class="search__input" id="search" name="search">
-        <label for="search" class="search__label">Поиск по сайту</label>
         <button class="search__submit"
                 type="submit"
                 form="search-form"
                 formaction="/search"
                 formmethod="post">Найти
         </button>
+        <label for="search" class="search__label">Поиск по сайту</label>
+
       </form>
       <div class="header__account">
         <ul class="account__menu-list">
@@ -61,13 +63,13 @@
               </li>
               <li class="catalog-menu__item">
                 <a href="" class="catalog-menu__link" title="Квадрокоптеры">Квадрокоптеры</a>
-              </li><br>
+              </li>
               <li class="catalog-menu__item">
                 <a href="" class="catalog-menu__link" title="Моноподы для селфи">Моноподы для селфи</a>
               </li>
               <li class="catalog-menu__item">
                 <a href="" class="catalog-menu__link" title="Умные часы">Умные часы</a>
-              </li><br>
+              </li>
               <li class="catalog-menu__item">
                 <a href="" class="catalog-menu__link" title="Экшн-камеры">Экшн-камеры</a>
               </li>
@@ -314,6 +316,7 @@
           <li class="about__delivery-item">ЖелДорЭкспедиция</li>
         </ul>
         <a href="#" class="btn about__button" title="Подробнее о компании">Подробнее о нас</a>
+        <!-- <button class="btn about__button">Подробнее о нас</button> -->
       </section>
       <section class="contacts">
         <h2 class="section__title section__title_dash contacts__title">Контакты</h2>
@@ -321,11 +324,18 @@
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.
         </p>
-        <a href="" class="contacts__map-link" title="Схема проезда">
+        <a href="" class="contacts__map-link js-map-link" title="Схема проезда">
           <img src="img/map.png" alt="Схема проезда" class="contacts__image">
         </a>
-        <a href="#" class="btn contacts__button" title="Напишите нам">Напишите нам</a>
+        <a href="#" class="btn contacts__button js-about-us-btn" title="Напишите нам">Напишите нам</a>
       </section>
+
+      <div class="modal__map js-modal js-modal-map">
+        <button class="m-close js-modal-close"></button>
+        <iframe width="960" height="559" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVYlcX_ZMtUYRHlBVzQxxlAY&key=AIzaSyAAUsuyUv0BmOszgQcvGteDoA7pYlR83Ug"></iframe>
+      </div>
+
     </div>
   </main>
 
@@ -399,6 +409,22 @@
 
   </div>
 </footer>
+<div class="write-us__container js-modal-write-us">
+  <button class="m-close js-modal-close"></button>
+  <form class="write-us__form">
+    <label for="name" class="write-us__label">Ваше имя:
+    <input type="text" text="" class="write-us__input write-us__input_name" name="name" placeholder="Представьтесь, пожалуйста">
+    </label>
+    <label for="email" class="write-us__label">Ваш e-mail:
+    <input type="email" text="" class="write-us__input write-us__input_email" name="email" placeholder="Для отправки ответа">
+    </label>
+    <label for="text" class="write-us__label">Текст письма:
+    <textarea name="text" id="" cols="68" rows="7" class="write-us__text" placeholder="В свободной форме"></textarea>
+    </label>
+    <button class="btn write-us__submit" type="submit">Отправить</button>
+  </form>
+</div>
 
+<script src="js/script.js"></script>
 </body>
 </html>
