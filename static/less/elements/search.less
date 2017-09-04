@@ -78,6 +78,21 @@
       background-color: @black;
       color: @white;
       opacity: .3;
+      display: inline-block;
+      visibility: visible;
+    }
+
+    &:active ~ .search__label {
+      display: none;
+    }
+
+    &:focus {
+      display: inline-block;
+      visibility: visible;
+    }
+
+    &:focus ~ .search__label {
+      display: none;
     }
   }
 }
