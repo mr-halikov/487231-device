@@ -843,10 +843,11 @@ body {
 .footer__credits {
   display: block;
   width: 27px;
-  height: 35px;
+  height: 36px;
   margin: 63px 0 0 0;
   background-image: url('../img/svg/logo-html.svg');
   background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
 }
 .footer__credits:hover {
