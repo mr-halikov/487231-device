@@ -154,11 +154,16 @@ body {
   margin: 38px 0 0 0;
 }
 .about__button {
-  display: table;
   margin: 55px 0 0 0;
-  padding-left: 23px;
-  padding-right: 21px;
   letter-spacing: 3.5px;
+  display: inline-block;
+  border: none;
+  background: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 260px;
+  padding-left: 23px;
+  padding-right: 2px;
 }
 .account__menu-list {
   margin: 0;
@@ -446,10 +451,13 @@ body {
   margin: 39px 0 0 0;
 }
 .contacts__button {
-  display: table;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 260px;
   margin: 66px 0 0 0;
   padding-left: 40px;
-  padding-right: 38px;
+  padding-right: 2px;
   letter-spacing: 3.5px;
 }
 .filter__form {
