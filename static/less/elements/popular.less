@@ -5,7 +5,7 @@
     width: 100%;
     justify-content: space-between;
     list-style-type: none;
-    margin: 90px 0 0 0;
+    margin: 92px 0 0 0;
     padding: 0;
   }
 
@@ -43,43 +43,52 @@
       background-color: @visVis;
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 160px;
+      height: 160px;
+    }
+
     &_vr {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-1.svg');
         background-repeat: no-repeat;
         background-position:  31px 52px;
       }
     }
     &_monopode {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-2.svg');
         background-repeat: no-repeat;
         background-position:  38px 41px;
       }
     }
     &_action {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-3.svg');
         background-repeat: no-repeat;
         background-position:  48px 38px;
       }
     }
     &_fitness {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-4.svg');
         background-repeat: no-repeat;
         background-position:  28px 50px;
       }
     }
     &_smartwatch {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-5.svg');
         background-repeat: no-repeat;
         background-position:  55px 32px;
       }
     }
     &_quadcopter {
-      &::before {
+      &::after {
         background-image: url('../img/svg/popular-6.svg');
         background-repeat: no-repeat;
         background-position:  14px 49px;
@@ -91,13 +100,9 @@
       }
 
     &:active {
-      opacity: .3;
-    }
-
-    &:active::before {
-      &::before {
-        opacity: 1;
-        background-color: rgba(240, 197, 46, 1);
+      color: #cacaca;
+      &::after {
+        opacity: .3;
       }
     }
   }
