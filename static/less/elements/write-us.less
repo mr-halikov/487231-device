@@ -36,6 +36,7 @@
     width: 360px;
     box-sizing: border-box;
     border: none;
+    border-radius: 0;
     background-color: #f2f2f2;
     padding: 13px 20px 17px 20px;
     margin-top: 12px;
@@ -49,6 +50,16 @@
     &::placeholder {
       opacity: .4;
     }
+    &:hover {
+      background-color: #ebebeb;
+    }
+    &:focus {
+      outline: solid 2px @visVis;
+    }
+    &:invalid {
+      background-color: #f6dada;
+    }
+
   }
 
   &__text {
@@ -58,6 +69,7 @@
     padding: 13px 20px 17px 20px;
     resize: none;
     border: none;
+    border-radius: 0;
     background-color: #f2f2f2;
     opacity: 1;
     color: @charcoal;
@@ -68,6 +80,14 @@
 
     &::placeholder {
       opacity: .4;
+    }
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:focus {
+      outline: solid 2px @visVis;
     }
   }
 

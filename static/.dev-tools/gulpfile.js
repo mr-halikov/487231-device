@@ -31,7 +31,7 @@ var path = {
     },
     src: {
         html: '../*.html',
-        js: '../js/main.js',
+        js: '../js/script.js',
         style: '../less/main.less',
         img: '../assets/images/**/*.*',
         sprite : '../assets/sprite/**/*.*',
