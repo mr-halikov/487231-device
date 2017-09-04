@@ -112,6 +112,7 @@ body {
   width: 560px;
 }
 .about__container {
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -2083,6 +2084,19 @@ body {
   padding-left: 34px;
   padding-right: 36px;
   margin-top: 38px;
+}
+.modal__map {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 960px;
+  height: 559px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+          box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
 }
 .m-show {
   display: block;
