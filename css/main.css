@@ -1996,6 +1996,94 @@ body {
       flex-wrap: wrap;
   padding: 69px 0 0 70px;
 }
+.write-us__container {
+  display: none;
+  width: 960px;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1;
+  -webkit-box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+          box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  background-color: #ffffff;
+  padding: 97px 100px 80px 100px;
+  z-index: 3;
+}
+.write-us__label {
+  display: inline-block;
+  font-family: Gilroy, OpenSans, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.write-us__label:nth-child(2) {
+  float: right;
+}
+.write-us__label:nth-child(3) {
+  margin-top: 34px;
+}
+.write-us__input {
+  display: block;
+  width: 360px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 13px 20px 17px 20px;
+  margin-top: 12px;
+  opacity: 1;
+  color: #464646;
+  font-family: OpenSans, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.write-us__input::-webkit-input-placeholder {
+  opacity: .4;
+}
+.write-us__input:-ms-input-placeholder {
+  opacity: .4;
+}
+.write-us__input::placeholder {
+  opacity: .4;
+}
+.write-us__text {
+  width: 760px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 12px;
+  padding: 13px 20px 17px 20px;
+  resize: none;
+  border: none;
+  background-color: #f2f2f2;
+  opacity: 1;
+  color: #464646;
+  font-family: OpenSans, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.write-us__text::-webkit-input-placeholder {
+  opacity: .4;
+}
+.write-us__text:-ms-input-placeholder {
+  opacity: .4;
+}
+.write-us__text::placeholder {
+  opacity: .4;
+}
+.write-us__submit {
+  display: block;
+  background: none;
+  border: none;
+  padding-left: 34px;
+  padding-right: 36px;
+  margin-top: 38px;
+}
 .m-show {
   display: block;
 }
@@ -2003,6 +2091,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.m-close {
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background: none;
+  background-image: url('../img/svg/modal-close.svg');
+  opacity: .5;
+  cursor: pointer;
+}
+.m-close:hover {
+  opacity: 1;
+}
+.m-close:active {
+  opacity: .3;
+  outline: none;
+}
+.m-close:focus {
+  outline: none;
 }
 html,
 body {

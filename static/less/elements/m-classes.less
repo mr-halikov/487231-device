@@ -5,3 +5,27 @@
 .m-show-flex {
   display: flex;
 }
+
+.m-close {
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width:55px;
+  height: 55px;
+  border: none;
+  background: none;
+  background-image: url('../img/svg/modal-close.svg');
+  opacity: .5;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: .3;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
