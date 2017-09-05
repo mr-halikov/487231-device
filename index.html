@@ -231,18 +231,18 @@
         <div class="services__controls">
           <ul class="services__controls_list">
             <li class="services__controls_item">
-              <button class="btn services__button services__button_active">Доставка</button>
+              <button class="btn services__button services__button_active js-services-button" data-btn-for="delivery">Доставка</button>
             </li>
             <li class="services__controls_item">
-              <button class="btn services__button">Гарантия</button>
+              <button class="btn services__button js-services-button" data-btn-for="warranty">Гарантия</button>
             </li>
             <li class="services__controls_item">
-              <button class="btn services__button">Кредит</button>
+              <button class="btn services__button js-services-button" data-btn-for="credit">Кредит</button>
             </li>
           </ul>
         </div>
         <div class="services__content">
-          <article class="services__item services__item_delivery">
+          <article class="services__item services__item_delivery js-services-tab m-show" data-tab-name="delivery">
             <h2 class="heading services__heading">Доставка</h2>
             <p class="services__text">
               Мы с удовольствием доставим ваш товар прямо к вашему <br>
@@ -250,7 +250,7 @@
               заработаем, поднимая его на ваш этаж.
             </p>
           </article>
-          <article class="services__item services__item_warranty">
+          <article class="services__item services__item_warranty js-services-tab" data-tab-name="warranty">
             <h2 class="heading services__heading">Гарантия</h2>
             <p class="services__text">
               Если из-за возгорания купленного у нас товара у вас сгорит <br>
@@ -258,7 +258,7 @@
               Товар, не дом, конечно же.
             </p>
           </article>
-          <article class="services__item services__item_credit m-show">
+          <article class="services__item services__item_credit js-services-tab" data-tab-name="credit">
             <h2 class="heading services__heading">Кредит</h2>
             <p class="services__text">
               Залезть в долговую яму стало проще! Кредитные <br>

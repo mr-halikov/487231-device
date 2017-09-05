@@ -1578,8 +1578,8 @@ body {
 }
 .services__button:active {
   color: #f7e184;
-  outline: none;
   opacity: 1;
+  outline: none;
 }
 .services__button:active::before {
   content: '';
@@ -1588,6 +1588,9 @@ body {
   width: 280px;
   height: 40px;
   background-color: #000000;
+}
+.services__button:focus {
+  outline: none;
 }
 .services__button_active {
   color: #f7e184;

@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
       })
     }
 
+    // services tabs
+    var servicesBtns = Array.prototype.slice.call( document.querySelectorAll('.js-services-button') );
+
+    if (servicesBtns) {
+      servicesBtns.forEach(function(button) {
+        button.addEventListener('click', switchServicesTab);
+      })
+    }
+
     //show modalForm
     function modalForm(event){
       event.preventDefault();
@@ -67,12 +76,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
       // Set active slide
       slides.forEach(function(slide) {
         var attribute = slide.getAttribute('data-slide');
-        if (attribute == index) {
+        if (attribute === index) {
           slide.classList.add('m-show-flex');
         } else {
           slide.classList.remove('m-show-flex');
         }
       })
+    }
+
+    function switchServicesTab(event) {
+
+      var targetSlide = event.currentTarget.getAttribute( 'data-btn-for' );
+      var tabs = Array.prototype.slice.call( document.querySelectorAll('.js-services-tab') );
+
+      // Set active button
+      servicesBtns.forEach(function(button) {
+        button.classList.remove('services__button_active');
+      })
+
+      event.currentTarget.classList.add('services__button_active');
+
+      // Switch slide
+      tabs.forEach(function(tab) {
+        var tabName = tab.getAttribute('data-tab-name');
+        if (targetSlide === tabName) {
+          tab.classList.add('m-show');
+        } else {
+          tab.classList.remove('m-show');
+        }
+      })
+
+
     }
 
   });

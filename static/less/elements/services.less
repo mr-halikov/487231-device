@@ -75,6 +75,8 @@
       color: #f7e184;
       outline: none;
       opacity: 1;
+      outline: none;
+
       &::before {
         content: '';
         position: absolute;
@@ -83,6 +85,10 @@
         height: 40px;
         background-color: @black;
       }
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &_active {
