@@ -99,18 +99,18 @@
         <div class="slider__controls">
           <ul class="slider__controls-list">
             <li class="slider__controls-item">
-              <button class="slider__button slider__button_active js-slider-button"></button>
+              <button class="slider__button slider__button_active js-slider-button" data-control="1"></button>
             </li>
             <li class="slider__controls-item">
-              <button class="slider__button js-slider-button"></button>
+              <button class="slider__button js-slider-button" data-control="2"></button>
             </li>
             <li class="slider__controls-item">
-              <button class="slider__button js-slider-button"></button>
+              <button class="slider__button js-slider-button" data-control="3"></button>
             </li>
           </ul>
         </div>
       
-        <article class="slider__item slider__item_01 m-show-flex">
+        <article class="slider__item slider__item_01 js-slide m-show-flex" data-slide="1">
           <div class="slider__image-wrapper">
             <img src="img/slider/slider-1.png" alt="Длинная палка для селфи" class="slider__image">
           </div>
@@ -140,7 +140,7 @@
             </ul>
           </div>
         </article>
-        <article class="slider__item slider__item_02">
+        <article class="slider__item slider__item_02 js-slide" data-slide="2">
           <div class="slider__image-wrapper">
             <img src="img/slider/slider-2.png" alt="Мотивирующий фитнес-браслет" class="slider__image">
           </div>
@@ -162,7 +162,7 @@
             </ul>
           </div>
         </article>
-        <article class="slider__item slider__item_03">
+        <article class="slider__item slider__item_03 js-slide" data-slide="3">
           <div class="slider__image-wrapper">
             <img src="img/slider/slider-3.png" alt="Квадрокоптер с лазером" class="slider__image">
           </div>
@@ -231,18 +231,18 @@
         <div class="services__controls">
           <ul class="services__controls_list">
             <li class="services__controls_item">
-              <button class="btn services__button services__button_active">Доставка</button>
+              <button class="btn services__button services__button_active js-services-button" data-btn-for="delivery">Доставка</button>
             </li>
             <li class="services__controls_item">
-              <button class="btn services__button">Гарантия</button>
+              <button class="btn services__button js-services-button" data-btn-for="warranty">Гарантия</button>
             </li>
             <li class="services__controls_item">
-              <button class="btn services__button">Кредит</button>
+              <button class="btn services__button js-services-button" data-btn-for="credit">Кредит</button>
             </li>
           </ul>
         </div>
         <div class="services__content">
-          <article class="services__item services__item_delivery">
+          <article class="services__item services__item_delivery js-services-tab m-show" data-tab-name="delivery">
             <h2 class="heading services__heading">Доставка</h2>
             <p class="services__text">
               Мы с удовольствием доставим ваш товар прямо к вашему <br>
@@ -250,7 +250,7 @@
               заработаем, поднимая его на ваш этаж.
             </p>
           </article>
-          <article class="services__item services__item_warranty">
+          <article class="services__item services__item_warranty js-services-tab" data-tab-name="warranty">
             <h2 class="heading services__heading">Гарантия</h2>
             <p class="services__text">
               Если из-за возгорания купленного у нас товара у вас сгорит <br>
@@ -258,7 +258,7 @@
               Товар, не дом, конечно же.
             </p>
           </article>
-          <article class="services__item services__item_credit m-show">
+          <article class="services__item services__item_credit js-services-tab" data-tab-name="credit">
             <h2 class="heading services__heading">Кредит</h2>
             <p class="services__text">
               Залезть в долговую яму стало проще! Кредитные <br>
@@ -360,12 +360,12 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVYlcX_ZMtUYRHlBVz
     </div>
 
     <div class="footer__row footer__row_middle">
-      <div class="footer_col">
+      <div class="footer__col">
         <p class="footer__address">
           г. Москва, ул. Строителей, 15
         </p>
       </div>
-      <div class="footer_col">
+      <div class="footer__col">
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
             <a href="" class="footer__nav-link" title="Доставка">Доставка</a>
@@ -378,16 +378,16 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVYlcX_ZMtUYRHlBVz
           </li>
         </ul>
       </div>
-      <div class="footer_col">
+      <div class="footer__col">
         <a href="tel:+7(495)495-95-95" class="footer__phone" title="Позвонить: +7 (495) 495-95-95">Тел.: +7 (495) 495-95-95</a>
       </div>
     </div>
 
     <div class="footer__row footer__row_bottom">
-      <div class="footer_col">
+      <div class="footer__col">
 
       </div>
-      <div class="footer_col">
+      <div class="footer__col">
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a href="" class="footer__social-link footer__social-link_fb" title="Мы в Facebook"></a>
@@ -400,7 +400,7 @@ src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVYlcX_ZMtUYRHlBVz
           </li>
         </ul>
       </div>
-      <div class="footer_col">
+      <div class="footer__col">
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__credits" title="Перейти на сайт htmlacademy.ru">
           <!-- <img src="" alt="HTML academy" class="footer__credits-logo"> -->
         </a>
