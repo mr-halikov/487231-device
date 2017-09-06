@@ -64,7 +64,7 @@ body {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -126,7 +126,7 @@ body {
 }
 .about__delivery-item {
   position: relative;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 40px;
@@ -173,6 +173,7 @@ body {
 }
 .account__menu-item {
   display: inline-block;
+  vertical-align: baseline;
 }
 .account__menu-link {
   position: relative;
@@ -416,7 +417,7 @@ body {
   z-index: -1;
 }
 .columntitle__heading {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -447,14 +448,21 @@ body {
   margin: 40px 0 0 0;
 }
 .contacts__map-link {
+  display: block;
   margin: 39px 0 0 0;
+  width: 100%;
+  height: 222px;
+  background-color: #e5e5e5;
+}
+.contacts__map-link img {
+  font-size: 12px;
 }
 .contacts__button {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 260px;
-  margin: 66px 0 0 0;
+  margin: 69px 0 0 0;
   padding-left: 40px;
   padding-right: 2px;
   letter-spacing: 3.5px;
@@ -479,7 +487,7 @@ body {
 .filter__caption {
   margin: 15px 0 0 0;
   padding: 0;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -552,7 +560,7 @@ body {
 .filter__range-label {
   position: absolute;
   top: 12px;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
@@ -605,6 +613,12 @@ body {
   padding: 0 0 0 39px;
   position: relative;
 }
+.filter__label:hover::before {
+  opacity: .6;
+}
+.filter__label:active::before {
+  opacity: 1;
+}
 .filter__label_color::before {
   content: '';
   position: absolute;
@@ -634,13 +648,6 @@ body {
   line-height: 22px;
   letter-spacing: 3.5px;
   z-index: 1;
-  outline: none;
-}
-.filter__submit:focus {
-  outline: none;
-}
-.filter__submit:active {
-  outline: none;
 }
 .footer {
   background-color: #464646;
@@ -720,7 +727,7 @@ body {
   margin: 24px 0 0 0;
   padding: 0;
   list-style-type: none;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -755,6 +762,7 @@ body {
 }
 .footer__shop-menu-item {
   display: inline-block;
+  vertical-align: baseline;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 20px;
@@ -806,6 +814,7 @@ body {
 }
 .footer__phone {
   display: inline-block;
+  vertical-align: baseline;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 20px;
@@ -829,10 +838,11 @@ body {
 }
 .footer__social-item {
   display: inline-block;
+  vertical-align: baseline;
   margin: 0 10px 0 9px;
 }
 .footer__social-link {
-  display: inline-block;
+  display: block;
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -961,7 +971,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1039,7 +1049,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000000;
-  font-family: Gilroy;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 47px;
   font-weight: 700;
 }
@@ -1066,7 +1076,8 @@ body {
   margin: 0;
   padding: 0;
   display: inline-block;
-  font-family: Gilroy, sans-serif;
+  vertical-align: baseline;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 4px;
@@ -1075,6 +1086,7 @@ body {
 }
 .paginator__link {
   display: inline-block;
+  vertical-align: baseline;
   padding: 26px 0 25px 0;
   text-decoration: none;
   letter-spacing: 3.5px;
@@ -1173,7 +1185,7 @@ body {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   padding: 195px 0 0 0;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
@@ -1285,11 +1297,17 @@ body {
   border-radius: 50% 50%;
   color: #000000;
   opacity: .2;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+}
+.products__image-wrapper {
+  display: block;
+  width: 100%;
+  height: 380px;
+  background-color: #ebebeb;
 }
 .products__description {
   display: -webkit-box;
@@ -1305,7 +1323,7 @@ body {
 .products__title {
   max-width: 260px;
   margin: 0;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -1343,6 +1361,7 @@ body {
 }
 .products__to-cart {
   display: inline-block;
+  vertical-align: baseline;
   border: none;
   background: none;
   -webkit-box-sizing: border-box;
@@ -1355,9 +1374,6 @@ body {
   z-index: 1;
   letter-spacing: 3.5px;
 }
-.products__to-cart:active {
-  outline: none;
-}
 .products__to-compare {
   border: none;
   background: none;
@@ -1369,7 +1385,6 @@ body {
   line-height: 20px;
   letter-spacing: 0;
   opacity: .5;
-  outline: none;
   z-index: 1;
 }
 .products__to-compare:hover {
@@ -1423,7 +1438,6 @@ body {
   background: transparent;
   border: none;
   border-bottom: solid 2px transparent;
-  outline: none;
   font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -1436,6 +1450,7 @@ body {
 }
 .search__input:focus ~ .search__submit {
   display: inline-block;
+  vertical-align: baseline;
   visibility: visible;
 }
 .search__input:focus ~ .search__label {
@@ -1463,6 +1478,7 @@ body {
   color: #ffffff;
   opacity: .3;
   display: inline-block;
+  vertical-align: baseline;
   visibility: visible;
 }
 .search__submit:active ~ .search__label {
@@ -1470,6 +1486,7 @@ body {
 }
 .search__submit:focus {
   display: inline-block;
+  vertical-align: baseline;
   visibility: visible;
 }
 .search__submit:focus ~ .search__label {
@@ -1479,7 +1496,7 @@ body {
   margin: 55px 0 0 0;
   padding: 0;
   color: #000000;
-  font-family: Gilroy;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 47px;
   font-weight: 700;
 }
@@ -1570,6 +1587,7 @@ body {
   border: none;
   background: none;
   display: inline-block;
+  vertical-align: baseline;
   width: 160px;
   padding-left: 0;
   padding-right: 0;
@@ -1579,7 +1597,6 @@ body {
 .services__button:active {
   color: #f7e184;
   opacity: 1;
-  outline: none;
 }
 .services__button:active::before {
   content: '';
@@ -1589,12 +1606,8 @@ body {
   height: 40px;
   background-color: #000000;
 }
-.services__button:focus {
-  outline: none;
-}
 .services__button_active {
   color: #f7e184;
-  outline: none;
 }
 .services__button_active::before {
   content: '';
@@ -1648,7 +1661,7 @@ body {
   margin: 25px 0 0 0;
   padding: 0;
   color: #000000;
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 47px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1731,6 +1744,7 @@ body {
 }
 .slider__controls-item {
   display: inline-block;
+  vertical-align: baseline;
   margin: 0 0 0 18px;
   padding: 0;
 }
@@ -1757,12 +1771,6 @@ body {
 .slider__button_active::before {
   background-image: url('../img/svg/slider-button.svg');
 }
-.slider__button:active {
-  outline: none;
-}
-.slider__button:focus {
-  outline: none;
-}
 .slider__item {
   display: none;
   min-height: 501px;
@@ -1784,7 +1792,7 @@ body {
   position: absolute;
   top: -12px;
   right: 46px;
-  font-family: Gilroy;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 179px;
   font-weight: 700;
   line-height: 180px;
@@ -1826,7 +1834,7 @@ body {
   padding: 0;
   position: relative;
   color: #000000;
-  font-family: Gilroy;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
   font-size: 47px;
   font-weight: 700;
   line-height: 56px;
@@ -1850,6 +1858,7 @@ body {
 }
 .slider__link {
   display: inline-block;
+  vertical-align: baseline;
   margin: 44px 0 0 0;
   letter-spacing: 3.5px;
 }
@@ -1879,7 +1888,7 @@ body {
 }
 .slider__details-item_content {
   display: block;
-  font-family: Gilroy, OpenSans, sans-serif;
+  font-family: Gilroy, OpenSans, Helvetica, Arial, sans-serif;
   font-size: 36px;
   font-weight: 300;
   line-height: 40px;
@@ -1942,6 +1951,7 @@ body {
 }
 .sort__link-arrow {
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   margin-top: 1px;
   width: 11px;
@@ -2046,7 +2056,8 @@ body {
 }
 .write-us__label {
   display: inline-block;
-  font-family: Gilroy, OpenSans, sans-serif;
+  vertical-align: baseline;
+  font-family: Gilroy, OpenSans, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
@@ -2069,7 +2080,7 @@ body {
   margin-top: 12px;
   opacity: 1;
   color: #464646;
-  font-family: OpenSans, sans-serif;
+  font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -2104,7 +2115,7 @@ body {
   background-color: #f2f2f2;
   opacity: 1;
   color: #464646;
-  font-family: OpenSans, sans-serif;
+  font-family: OpenSans, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -2171,10 +2182,6 @@ body {
 }
 .m-close:active {
   opacity: .3;
-  outline: none;
-}
-.m-close:focus {
-  outline: none;
 }
 html,
 body {
