@@ -139,6 +139,7 @@
     position: absolute;
     left: -1000;
     visibility: hidden;
+
     &:checked ~ .filter__label_color {
       &::before {
         width: 27px;
@@ -150,6 +151,7 @@
     &:disabled ~ .filter__label_color {
       opacity: .3;
     }
+
   }
 
   &__input-radio {
@@ -171,6 +173,18 @@
   &__label {
     padding: 0 0 0 39px;
     position: relative;
+
+    &:hover {
+      &::before {
+        opacity: .6;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 1;
+      }
+    }
 
     &_color {
       &::before {
