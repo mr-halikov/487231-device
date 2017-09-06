@@ -106,11 +106,11 @@ gulp.task('sprite:build', function() {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefixer())
-        .pipe(cssmin())
-        .pipe(sourcemaps.write())
+        //.pipe(cssmin())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
